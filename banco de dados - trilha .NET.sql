@@ -1,7 +1,8 @@
+-- Question 1
 select nome,ano
 From Filmes;
 
--- Questão 2
+-- Question 2
 select *
 From Filmes
 order by ano asc;
@@ -55,13 +56,13 @@ Select Filmes.nome as Nome, Generos.genero as Genero
 From FilmesGenero
 INNER JOIN Generos on FilmesGenero.IdGenero = Generos.id
 INNER JOIN Filmes on FilmesGenero.IdFilme = Filmes.id
-Where Generos.genero = 'Mistério';
+Where Generos.genero = 'MistÃ©rio';
 
 -- Question 12
 Select Filmes.nome as NomeDoFilme, 
-       Atores.PrimeiroNome, 
-       Atores.UltimoNome, 
-       ElencoFilme.Papel
+Atores.PrimeiroNome, 
+Atores.UltimoNome, 
+ElencoFilme.Papel
 From Filmes
 INNER JOIN ElencoFilme on Filmes.id = ElencoFilme.idFilme
 INNER JOIN Atores on ElencoFilme.idAtor = Atores.id;
